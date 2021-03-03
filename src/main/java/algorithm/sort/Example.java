@@ -1,7 +1,6 @@
 package algorithm.sort;
 
 import algorithm.utils.In;
-import algorithm.utils.StdIn;
 import algorithm.utils.StdOut;
 
 /**
