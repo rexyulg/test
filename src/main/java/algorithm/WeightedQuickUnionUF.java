@@ -31,6 +31,14 @@ public class WeightedQuickUnionUF {
             return;
         }
         //将小树的根结点连接到大树的根结点
+        if (sz[i] < sz[j]) {
+            id[i] = j;
+            sz[j] += sz[i];
+        } else {
+            id[j] = i;
+            sz[i] += sz[j];
+        }
+        cnt--;
     }
 
     public int find(int p) {
