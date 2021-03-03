@@ -1,4 +1,4 @@
-package main.java.lambda;
+package lambda;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

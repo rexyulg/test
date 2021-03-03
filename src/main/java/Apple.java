@@ -1,5 +1,3 @@
-package main.java;
-
 /**
  * @author yulg
  * @E-mail yulg@dazhuanjia.com

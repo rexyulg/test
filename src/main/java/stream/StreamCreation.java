@@ -1,4 +1,4 @@
-package main.java.stream;
+package stream;
 
 import java.io.IOException;
 import java.nio.charset.Charset;

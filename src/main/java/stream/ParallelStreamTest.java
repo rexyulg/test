@@ -1,4 +1,4 @@
-package main.java.stream;
+package stream;
 
 import java.util.function.LongUnaryOperator;
 import java.util.stream.LongStream;

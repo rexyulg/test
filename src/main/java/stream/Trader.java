@@ -1,4 +1,4 @@
-package main.java.stream;
+package stream;
 
 /**
  * @author yulg

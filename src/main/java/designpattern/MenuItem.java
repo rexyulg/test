@@ -1,4 +1,4 @@
-package main.java.designpattern;
+package designpattern;
 
 /**
  * @author yulg
