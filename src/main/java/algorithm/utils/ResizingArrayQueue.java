@@ -1,10 +1,11 @@
-package main.java.algorithm;
+package algorithm.utils;
 
 /**
  * @author yulg
  * @E-mail yulg@dazhuanjia.com
  * @date 2021/2/28 11:53 上午
  */
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 

@@ -1,4 +1,6 @@
-package main.java.algorithm;
+package algorithm.utils;
+
+import algorithm.utils.StdOut;
 
 /**
  * @author yulg

@@ -1,4 +1,4 @@
-package main.java.algorithm;
+package algorithm.utils;
 
 import java.io.BufferedInputStream;
 import java.io.File;

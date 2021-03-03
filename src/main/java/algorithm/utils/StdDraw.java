@@ -1,4 +1,4 @@
-package main.java.algorithm;
+package algorithm.utils;
 
 import java.awt.BasicStroke;
 import java.awt.Color;

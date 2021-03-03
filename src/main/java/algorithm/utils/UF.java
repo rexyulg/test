@@ -1,16 +1,16 @@
-package main.java.algorithm;
+package algorithm.utils;
 
 /**
  * @author yulg
  * @E-mail yulg@dazhuanjia.com
- * @date 2021/3/3 9:57 上午
+ * @date 2021/3/2 8:51 下午
  */
-public class QuickUnionUF {
+public class UF {
 
     private int[] id;
     private int cnt;
 
-    public QuickUnionUF(int N) {
+    public UF(int N) {
         cnt = N;
         id = new int[N];
         for (int i = 0; i < N; i++) {
@@ -24,25 +24,26 @@ public class QuickUnionUF {
      * @param q
      */
     public void union(int p, int q) {
-        int pRoot = find(p);
-        int qRoot = find(q);
-        if (pRoot == qRoot) {
+        int pid = find(p);
+        int qid = find(q);
+        if (pid == qid) {
             return;
         }
-        id[pRoot] = qRoot;
+        for (int i = 0; i < id.length; i++) {
+            if (id[i] == pid) {
+                id[i] = qid;
+            }
+        }
         cnt--;
     }
 
     /**
-     * p(0~N-1)所在分量的跟标识符
+     * p(0~N-1)所在分量的标识符
      * @param p
      * @return
      */
     public int find(int p) {
-        while (p != id[p]) {
-            p = id[p];
-        }
-        return p;
+        return id[p];
     }
 
     /**
