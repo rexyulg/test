@@ -61,7 +61,9 @@ public class StdRandom {
      * @throws IllegalArgumentException if {@code n <= 0}
      */
     public static int uniform(int n) {
-        if (n <= 0) throw new IllegalArgumentException("argument must be positive: " + n);
+        if (n <= 0) {
+            throw new IllegalArgumentException("argument must be positive: " + n);
+        }
         return random.nextInt(n);
     }
 
