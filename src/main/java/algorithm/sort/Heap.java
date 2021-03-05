@@ -10,11 +10,11 @@ public class Heap {
     //升序排列
     public static void sort(Comparable[] a) {
         int N = a.length;
-        //堆的构造
+        //1.堆的构造
         for (int k = N / 2; k >= 1; k--) {
             sink(a, k, N);
         }
-        //下沉排序
+        //2.下沉排序
         while (N > 1) {
             //取栈顶最大数，放到数组最后，栈去除该数
             exch(a, 1, N--);
