@@ -49,4 +49,47 @@ public class SlidingWindow {
             }
         }
     }
+
+    public static String minWindow(String s, String t) {
+        Map<Character, Integer> need = new HashMap<>(), window = new HashMap<>();
+        for (char c : t.toCharArray()) {
+            need.put(c, need.getOrDefault(c, 0) + 1);
+        }
+        int lo = 0, hi = 0;
+        int valid = 0;
+        int start = 0, len = Integer.MAX_VALUE;
+        while (hi < s.length()) {
+            char c = s.charAt(hi);
+            hi++;
+            if (need.containsKey(c)) {
+                window.put(c, window.getOrDefault(c, 0) + 1);
+                if (window.get(c).equals(need.get(c))) {
+                    valid++;
+                }
+            }
+            System.out.printf("window: [%d, %d)\n%n", lo, hi);
+            if (lo == 6 && hi == 12) {
+                System.out.println(124);
+            }
+            while (valid == need.size()) {
+                if (hi - lo < len) {
+                    len = hi - lo;
+                    start = lo;
+                }
+                char d = s.charAt(lo);
+                lo++;
+                if (need.containsKey(d)) {
+                    if (window.get(d).equals(need.get(d))) {
+                        valid--;
+                    }
+                    window.put(d, window.get(d) - 1);
+                }
+            }
+        }
+        return len == Integer.MAX_VALUE ? "" : s.substring(start, start + len);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(minWindow("ADOBECODEBANC", "ABC"));
+    }
 }
