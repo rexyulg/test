@@ -1,7 +1,6 @@
 package algorithm.utils;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author yulg
@@ -90,6 +89,9 @@ public class SlidingWindow {
     }
 
     public static void main(String[] args) {
-        System.out.println(minWindow("ADOBECODEBANC", "ABC"));
+        //System.out.println(minWindow("ADOBECODEBANC", "ABC"));
+        for (int i = 1; i < 1000; i++) {
+            System.out.println(Math.abs(new Random().nextInt()) % 100);
+        }
     }
 }
